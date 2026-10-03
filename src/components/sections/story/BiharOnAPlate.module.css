@@ -1,0 +1,67 @@
+.section {
+  padding-block: clamp(3rem, 7vw, 6rem);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+@media (min-width: 960px) {
+  .grid {
+    grid-template-columns: 20rem 1fr;
+    gap: clamp(4rem, 9vw, 7rem);
+    align-items: start;
+  }
+}
+
+.headCol {
+  position: relative;
+}
+
+@media (min-width: 960px) {
+  .headCol {
+    position: sticky;
+    top: 8rem;
+  }
+}
+
+.title {
+  margin-top: var(--space-5);
+  color: var(--fg);
+}
+
+.bodyCol {
+  max-width: 46rem;
+}
+
+.para {
+  font-size: var(--fs-lead);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-loose);
+  color: var(--fg);
+  text-wrap: pretty;
+}
+
+.para + .para {
+  margin-top: var(--space-6);
+}
+
+/* ---------- Pull quote ---------- */
+
+.pullQuote {
+  margin-block: clamp(2.5rem, 5vw, 4rem);
+  padding-block: clamp(2rem, 4vw, 3rem);
+  padding-left: clamp(1.5rem, 3vw, 2.5rem);
+  border-left: 2px solid var(--accent);
+  max-width: 36ch;
+}
+
+.pullQuote blockquote {
+  margin: 0;
+}
+
+.pullQuote p {
+  color: var(--fg);
+}

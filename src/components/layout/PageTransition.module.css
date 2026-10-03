@@ -1,0 +1,7 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* Contain sub-pixel overflow from the y-lift animation. */
+  will-change: opacity, transform;
+}

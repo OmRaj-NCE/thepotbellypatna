@@ -1,0 +1,55 @@
+.hero {
+  padding-block: clamp(4rem, 10vw, 9rem) clamp(2.5rem, 5vw, 4rem);
+}
+
+.inner {
+  max-width: 62rem;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-bottom: var(--space-6);
+}
+
+.title {
+  color: var(--fg);
+  max-width: 12ch;
+}
+
+.lead {
+  max-width: 52ch;
+  margin-top: var(--space-7);
+  font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-loose);
+  color: var(--fg-muted);
+  text-wrap: pretty;
+}
+
+.phoneLink {
+  color: var(--fg);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.phoneLink:hover {
+  color: var(--accent);
+}
+
+.notice {
+  max-width: 62ch;
+  margin-top: var(--space-7);
+  padding: var(--space-4) var(--space-5);
+  border-left: 2px solid var(--accent);
+  background-color: var(--accent-soft);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-body);
+  color: var(--fg-muted);
+}

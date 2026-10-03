@@ -1,0 +1,112 @@
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Page head ---------- */
+
+.pageHead {
+  padding-block: clamp(3.5rem, 8vw, 7rem) clamp(2.5rem, 5vw, 4rem);
+}
+
+.title {
+  margin-top: var(--space-5);
+  max-width: 20ch;
+}
+
+.lead {
+  margin-top: var(--space-5);
+  max-width: 56ch;
+}
+
+/* ---------- Category blocks ---------- */
+
+.blocks {
+  padding-block: clamp(2rem, 4vw, 3rem) clamp(4rem, 8vw, 7rem);
+}
+
+.empty {
+  padding-block: var(--space-9);
+  font-size: var(--fs-lead);
+  color: var(--fg-muted);
+  text-align: center;
+}
+
+/* ---------- Page footer CTA ---------- */
+
+.pageFoot {
+  margin-top: auto;
+  padding-block: clamp(4rem, 9vw, 8rem);
+  background-color: var(--bg-sunken);
+  border-top: var(--border-hairline);
+}
+
+.pageFootInner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 5vw, 3rem);
+  align-items: end;
+}
+
+@media (min-width: 900px) {
+  .pageFootInner {
+    grid-template-columns: 1.4fr 1fr;
+  }
+}
+
+.pageFootCopy {
+  max-width: 40rem;
+}
+
+.pageFootTitle {
+  margin-top: var(--space-4);
+  color: var(--fg);
+}
+
+.pageFootBody {
+  margin-top: var(--space-4);
+  max-width: 44ch;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-body);
+  color: var(--fg-muted);
+}
+
+.pageFootActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.pageFootBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.95rem 1.5rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--fg-inverse);
+  background-color: var(--color-charcoal);
+  border-radius: var(--radius-pill);
+  transition: background-color var(--dur-base) var(--ease-out);
+}
+
+.pageFootBtn:hover {
+  background-color: var(--accent);
+}
+
+.pageFootLink {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  letter-spacing: var(--ls-snug);
+  color: var(--fg);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.pageFootLink:hover {
+  color: var(--accent);
+}

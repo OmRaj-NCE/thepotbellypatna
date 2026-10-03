@@ -1,0 +1,278 @@
+/* ============================================================
+   THE POTBELLY — PATNA
+   Design Tokens
+   ------------------------------------------------------------
+   Everything visual in this project is defined here.
+   Components never hard-code a colour, size, or duration —
+   they reference a token from this file.
+   ============================================================ */
+
+:root {
+  /* ----------------------------------------------------------
+     1. COLOUR — RAW PALETTE
+     "Terracotta & Lotus" — warm, earthy, editorial.
+     ---------------------------------------------------------- */
+
+  /* Ivory & paper — the canvas */
+  --color-ivory:          #f6f1e7;
+  --color-ivory-soft:     #fbf8f1;
+  --color-paper:          #efe7d7;
+  --color-sand:           #e3d8c2;
+
+  /* Terracotta — the primary accent */
+  --color-terracotta:     #b8562f;
+  --color-terracotta-deep:#8c3e1f;
+  --color-terracotta-soft:#d07a52;
+
+  /* Earth & ink — text and depth */
+  --color-earth:          #4a3728;
+  --color-charcoal:       #24211e;
+  --color-ink:            #14120f;
+
+  /* Sage — a quiet secondary */
+  --color-sage:           #7d8c6a;
+  --color-sage-deep:      #59684a;
+
+  /* Wine & lotus — deep accents, used sparingly */
+  --color-wine:           #6e2233;
+  --color-wine-deep:      #4e1725;
+  --color-lotus:          #c98a8a;
+
+  /* Pure neutrals */
+  --color-white:          #ffffff;
+  --color-black:          #000000;
+
+  /* ----------------------------------------------------------
+     2. COLOUR — SEMANTIC TOKENS
+     Components should use THESE, not the raw palette above.
+     This lets us re-theme the whole site from one place.
+     ---------------------------------------------------------- */
+
+  /* Surfaces */
+  --bg:                   var(--color-ivory);
+  --bg-elevated:          var(--color-ivory-soft);
+  --bg-sunken:            var(--color-paper);
+  --bg-deep:              var(--color-charcoal);
+  --bg-accent:            var(--color-terracotta);
+
+  /* Text */
+  --fg:                   var(--color-charcoal);
+  --fg-muted:             rgba(36, 33, 30, 0.66);
+  --fg-subtle:            rgba(36, 33, 30, 0.44);
+  --fg-inverse:           var(--color-ivory);
+  --fg-inverse-muted:     rgba(246, 241, 231, 0.68);
+
+  /* Accent */
+  --accent:               var(--color-terracotta);
+  --accent-hover:         var(--color-terracotta-deep);
+  --accent-soft:          rgba(184, 86, 47, 0.12);
+
+  /* Borders */
+  --border-color:         rgba(36, 33, 30, 0.14);
+  --border-color-strong:  rgba(36, 33, 30, 0.30);
+  --border-color-inverse: rgba(246, 241, 231, 0.22);
+  --border-hairline:      1px solid var(--border-color);
+  --border-hairline-strong: 1px solid var(--border-color-strong);
+
+  /* ----------------------------------------------------------
+     3. TYPOGRAPHY
+     ---------------------------------------------------------- */
+
+  --font-display: "Instrument Serif", ui-serif, Georgia, "Times New Roman", serif;
+  --font-body:    "Work Sans", ui-sans-serif, system-ui, -apple-system,
+                  "Segoe UI", Roboto, sans-serif;
+
+  /* Font weights (Work Sans variable range is 300–700) */
+  --fw-light:     300;
+  --fw-regular:   400;
+  --fw-medium:    500;
+  --fw-semibold:  600;
+  --fw-bold:      700;
+
+  /* Fluid type scale — every size adapts to the viewport */
+  --fs-display-1: clamp(3.25rem, 12vw, 10rem);
+  --fs-display-2: clamp(2.625rem, 8vw, 6.5rem);
+  --fs-display-3: clamp(2rem, 5vw, 4rem);
+  --fs-display-4: clamp(1.625rem, 3.2vw, 2.625rem);
+
+  --fs-h1:        clamp(1.875rem, 3.6vw, 3rem);
+  --fs-h2:        clamp(1.5rem, 2.4vw, 2rem);
+  --fs-h3:        clamp(1.25rem, 1.7vw, 1.5rem);
+  --fs-h4:        1.125rem;
+
+  --fs-lead:      clamp(1.0625rem, 1.35vw, 1.25rem);
+  --fs-body:      1rem;
+  --fs-sm:        0.875rem;
+  --fs-xs:        0.75rem;
+  --fs-eyebrow:   0.6875rem;
+
+  /* Line heights */
+  --lh-tight:     0.95;
+  --lh-snug:      1.1;
+  --lh-heading:   1.18;
+  --lh-body:      1.65;
+  --lh-loose:     1.85;
+
+  /* Letter spacing */
+  --ls-tight:     -0.03em;
+  --ls-snug:      -0.015em;
+  --ls-normal:    0;
+  --ls-wide:      0.08em;
+  --ls-wider:     0.18em;
+  --ls-widest:    0.30em;
+
+  /* ----------------------------------------------------------
+     4. SPACING SCALE
+     A 12-step rhythm. Every margin and padding uses one of these.
+     ---------------------------------------------------------- */
+
+  --space-1:  0.25rem;   /*  4px */
+  --space-2:  0.5rem;    /*  8px */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px */
+  --space-5:  1.5rem;    /* 24px */
+  --space-6:  2rem;      /* 32px */
+  --space-7:  3rem;      /* 48px */
+  --space-8:  4rem;      /* 64px */
+  --space-9:  6rem;      /* 96px */
+  --space-10: 8rem;      /* 128px */
+  --space-11: 10rem;     /* 160px */
+  --space-12: 12rem;     /* 192px */
+
+  /* ----------------------------------------------------------
+     5. LAYOUT
+     ---------------------------------------------------------- */
+
+  --container-max:  1440px;
+  --container-wide: 1680px;
+  --container-text: 68ch;
+  --gutter:         clamp(1.25rem, 4vw, 3rem);
+
+  /* Breakpoints — documented only.
+     CSS media queries cannot read custom properties, so these
+     values are repeated literally inside @media rules:
+       sm  → 480px
+       md  → 768px
+       lg  → 1024px
+       xl  → 1280px
+       2xl → 1536px                                              */
+
+  /* ----------------------------------------------------------
+     6. BORDERS & RADII
+     Sharp and restrained. This is an editorial brand, not a
+     consumer app — avoid heavy rounding.
+     ---------------------------------------------------------- */
+
+  --radius-none: 0;
+  --radius-sm:   2px;
+  --radius-md:   4px;
+  --radius-lg:   8px;
+  --radius-pill: 999px;
+
+  --border-width-hairline: 1px;
+  --border-width-thin:     2px;
+
+  /* ----------------------------------------------------------
+     7. ELEVATION
+     Used sparingly — only for genuinely floating elements.
+     ---------------------------------------------------------- */
+
+  --shadow-soft:
+    0 1px 2px rgba(36, 33, 30, 0.04),
+    0 8px 24px rgba(36, 33, 30, 0.06);
+
+  --shadow-lift:
+    0 2px 4px rgba(36, 33, 30, 0.05),
+    0 18px 48px rgba(36, 33, 30, 0.10);
+
+  /* ----------------------------------------------------------
+     8. MOTION
+     ---------------------------------------------------------- */
+
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --dur-fast:   180ms;
+  --dur-base:   320ms;
+  --dur-slow:   640ms;
+  --dur-slower: 1000ms;
+
+  --transition-base:  all var(--dur-base) var(--ease-out);
+  --transition-color: color var(--dur-fast) var(--ease-out),
+                      background-color var(--dur-fast) var(--ease-out),
+                      border-color var(--dur-fast) var(--ease-out);
+
+  /* ----------------------------------------------------------
+     9. LAYERING
+     ---------------------------------------------------------- */
+
+  --z-base:    0;
+  --z-raised:  10;
+  --z-sticky:  100;
+  --z-header:  200;
+  --z-overlay: 300;
+  --z-modal:   400;
+  --z-toast:   500;
+}
+
+/* ============================================================
+   PHASE 10 — RESPONSIVE TOKENS
+   ============================================================ */
+
+:root {
+  /* iOS safe-area insets (0px on devices without a notch) */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+
+  /* Minimum touch target size (WCAG 2.5.5) */
+  --tap-min: 44px;
+}
+
+/* ------------------------------------------------------------
+   Large-screen scaling.
+   Kept as separate :root blocks so the tokens stay readable.
+   ------------------------------------------------------------ */
+
+@media (min-width: 1920px) {
+  :root {
+    --container-max: 1520px;
+    --container-wide: 1820px;
+    --gutter: 3.5rem;
+
+    --fs-display-1: clamp(3.5rem, 9vw, 11rem);
+    --fs-display-2: clamp(2.75rem, 6.5vw, 7.5rem);
+  }
+}
+
+@media (min-width: 2560px) {
+  :root {
+    --container-max: 1720px;
+    --container-wide: 2080px;
+    --gutter: 4.5rem;
+  }
+}
+
+/* ============================================================
+   PHASE 11 — ACCESSIBILITY: CONTRAST REFINEMENT
+   ------------------------------------------------------------
+   The previous values of --fg-muted and --fg-subtle were
+   measured against WCAG AA on the ivory background:
+
+     --fg-subtle (0.44 opacity) → 2.63:1  ✗  FAIL
+     --fg-muted  (0.66 opacity) → 4.91:1  ✓  PASS
+
+   The values below raise the contrast so that small caption,
+   meta and helper text passes AA at 4.5:1, while keeping the
+   warm earthy tone of the original palette.
+
+     --fg-subtle (0.64 opacity) → 4.65:1  ✓  PASS
+     --fg-muted  (0.72 opacity) → 6.00:1  ✓  PASS (AA+)
+   ============================================================ */
+
+:root {
+  --fg-muted: rgba(36, 33, 30, 0.72);
+  --fg-subtle: rgba(36, 33, 30, 0.64);
+}

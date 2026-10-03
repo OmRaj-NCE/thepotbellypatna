@@ -1,0 +1,125 @@
+.section {
+  background-color: var(--bg-sunken);
+  padding-block: clamp(5rem, 11vw, 11rem);
+}
+
+.head {
+  max-width: 52rem;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.title {
+  margin-top: var(--space-4);
+}
+
+.subtitle {
+  margin-top: var(--space-5);
+  max-width: 46ch;
+}
+
+/* ---------- List ---------- */
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: var(--space-4) var(--space-6);
+  padding-block: clamp(1.5rem, 3vw, 2.25rem);
+  border-top: var(--border-hairline);
+  transition: background-color var(--dur-base) var(--ease-out);
+}
+
+.list > *:last-child .row {
+  border-bottom: var(--border-hairline);
+}
+
+@media (min-width: 900px) {
+  .row {
+    grid-template-columns: 3.5rem minmax(0, 1fr) 10rem;
+    align-items: baseline;
+  }
+}
+
+.num {
+  font-family: var(--font-display);
+  font-size: var(--fs-sm);
+  color: var(--accent);
+  letter-spacing: var(--ls-wide);
+  padding-top: 0.35em;
+}
+
+.body {
+  min-width: 0;
+}
+
+.name {
+  color: var(--fg);
+}
+
+.desc {
+  margin-top: var(--space-2);
+  max-width: 60ch;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-body);
+  color: var(--fg-muted);
+}
+
+.meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  grid-column: 2 / -1;
+  margin-top: var(--space-3);
+}
+
+@media (min-width: 900px) {
+  .meta {
+    grid-column: auto;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--space-2);
+    margin-top: 0;
+    text-align: right;
+  }
+}
+
+.category {
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--fg-subtle);
+}
+
+/* ---------- CTA ---------- */
+
+.ctaWrap {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding-bottom: 4px;
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--fg);
+  border-bottom: 1px solid var(--fg);
+  transition: color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out);
+}
+
+.cta:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}

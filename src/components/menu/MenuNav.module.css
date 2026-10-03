@@ -1,0 +1,111 @@
+.wrap {
+  position: sticky;
+  top: 72px;
+  z-index: var(--z-sticky);
+  background-color: rgba(246, 241, 231, 0.9);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  backdrop-filter: saturate(180%) blur(14px);
+  border-top: var(--border-hairline);
+  border-bottom: var(--border-hairline);
+}
+
+@media (min-width: 768px) {
+  .wrap {
+    top: 88px;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-block: var(--space-3);
+}
+
+@media (min-width: 1024px) {
+  .inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
+  }
+}
+
+/* ---------- Category pills ---------- */
+
+.catNav {
+  min-width: 0;
+  margin-inline: calc(var(--gutter) * -1);
+}
+
+@media (min-width: 1024px) {
+  .catNav {
+    margin-inline: 0;
+  }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding-inline: var(--gutter);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .list {
+    padding-inline: 0;
+    flex-wrap: wrap;
+  }
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.9rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  transition: color var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out);
+}
+
+.pill:hover {
+  color: var(--fg);
+  background-color: var(--color-paper);
+}
+
+.pillActive {
+  color: var(--accent);
+  background-color: var(--accent-soft);
+}
+
+.pillActive:hover {
+  color: var(--accent);
+}
+
+/* ---------- Filter ---------- */
+
+.filterWrap {
+  display: flex;
+  align-items: center;
+  padding-inline: var(--gutter);
+}
+
+@media (min-width: 1024px) {
+  .filterWrap {
+    padding-inline: 0;
+    flex-shrink: 0;
+  }
+}

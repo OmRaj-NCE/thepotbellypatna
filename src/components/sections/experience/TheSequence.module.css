@@ -1,0 +1,108 @@
+.section {
+  background-color: var(--color-charcoal);
+  color: var(--fg-inverse);
+  padding-block: clamp(6rem, 13vw, 13rem);
+}
+
+.inner {
+  max-width: 68rem;
+}
+
+.head {
+  max-width: 52rem;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--fg-inverse-muted);
+  margin-bottom: var(--space-5);
+}
+
+.title {
+  color: var(--fg-inverse);
+}
+
+.subtitle {
+  max-width: 46ch;
+  margin-top: var(--space-5);
+  font-size: var(--fs-lead);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-body);
+  color: var(--fg-inverse-muted);
+}
+
+/* ---------- Sequence list ---------- */
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.moment {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  padding-block: clamp(2rem, 4vw, 3rem);
+  border-top: 1px solid var(--border-color-inverse);
+}
+
+.list > *:last-child .moment {
+  border-bottom: 1px solid var(--border-color-inverse);
+}
+
+@media (min-width: 800px) {
+  .moment {
+    grid-template-columns: 8rem 1fr;
+    gap: var(--space-6);
+  }
+}
+
+.step {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  line-height: 1;
+  letter-spacing: var(--ls-snug);
+  color: var(--color-terracotta-soft);
+}
+
+@media (min-width: 800px) {
+  .step {
+    text-align: right;
+  }
+}
+
+.body {
+  max-width: 56rem;
+}
+
+.momentTitle {
+  color: var(--fg-inverse);
+}
+
+.text {
+  margin-top: var(--space-4);
+  max-width: 62ch;
+  font-size: var(--fs-lead);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-loose);
+  color: var(--fg-inverse-muted);
+  text-wrap: pretty;
+}
+
+.pair {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-color-inverse);
+  max-width: 56ch;
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--color-terracotta-soft);
+}

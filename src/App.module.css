@@ -1,0 +1,154 @@
+/* ============================================================
+   Phase 2 — Type Specimen
+   A temporary page that visually proves the design system
+   works. It will be replaced by the real Home page in Phase 4.
+   ============================================================ */
+
+.specimen {
+  padding-block: var(--space-9) var(--space-10);
+}
+
+/* ---------- Masthead ---------- */
+
+.masthead {
+  padding-bottom: var(--space-6);
+  border-bottom: var(--border-hairline);
+  margin-bottom: var(--space-8);
+}
+
+.mastheadLabel {
+  margin-bottom: var(--space-5);
+}
+
+.mastheadTitle {
+  color: var(--fg);
+}
+
+.mastheadHindi {
+  font-family: var(--font-display);
+  font-size: clamp(1.125rem, 2.2vw, 1.75rem);
+  line-height: var(--lh-snug);
+  color: var(--fg-muted);
+  margin-top: var(--space-3);
+}
+
+.mastheadTagline {
+  max-width: 46ch;
+  margin-top: var(--space-5);
+}
+
+/* ---------- Sections ---------- */
+
+.block {
+  margin-bottom: var(--space-9);
+}
+
+.blockHead {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.blockIndex {
+  font-family: var(--font-display);
+  font-size: var(--fs-sm);
+  color: var(--accent);
+  letter-spacing: var(--ls-wide);
+}
+
+.blockTitle {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.blockRule {
+  flex: 1;
+  height: 0;
+  border: none;
+  border-top: var(--border-hairline);
+}
+
+/* ---------- Type scale rows ---------- */
+
+.scaleRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+  padding-block: var(--space-5);
+  border-bottom: var(--border-hairline);
+}
+
+.scaleRow:first-of-type {
+  border-top: var(--border-hairline);
+}
+
+.scaleMeta {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--fg-subtle);
+}
+
+.scaleSample {
+  color: var(--fg);
+}
+
+@media (min-width: 768px) {
+  .scaleRow {
+    grid-template-columns: 14rem 1fr;
+    align-items: baseline;
+    gap: var(--space-6);
+  }
+}
+
+/* ---------- Palette ---------- */
+
+.swatchGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--space-4);
+}
+
+.swatch {
+  border: var(--border-hairline);
+}
+
+.swatchChip {
+  height: 84px;
+  border-bottom: var(--border-hairline);
+}
+
+.swatchMeta {
+  padding: var(--space-3);
+}
+
+.swatchName {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--fg);
+}
+
+.swatchValue {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-wide);
+  color: var(--fg-subtle);
+}
+
+/* ---------- Footer note ---------- */
+
+.note {
+  padding-top: var(--space-6);
+  border-top: var(--border-hairline);
+  max-width: var(--container-text);
+}

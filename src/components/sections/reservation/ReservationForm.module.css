@@ -1,0 +1,265 @@
+.section {
+  padding-block: clamp(2rem, 4vw, 3rem) clamp(5rem, 10vw, 9rem);
+}
+
+.inner {
+  max-width: 62rem;
+}
+
+/* ============================================================
+   FORM
+   ============================================================ */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 4vw, 3rem);
+  padding: clamp(2rem, 4vw, 3.5rem);
+  border: var(--border-hairline);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-elevated);
+}
+
+.formEyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.5rem, 3vw, 2rem);
+}
+
+@media (min-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.spanFull {
+  grid-column: 1 / -1;
+}
+
+/* ---------- Error banner ---------- */
+
+.errorBanner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-left: 2px solid var(--color-wine);
+  background-color: rgba(110, 34, 51, 0.08);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-body);
+  color: var(--color-wine);
+}
+
+.errorBanner svg {
+  flex-shrink: 0;
+  margin-top: 0.35em;
+}
+
+/* ---------- Actions ---------- */
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+
+@media (min-width: 720px) {
+  .actions {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.submitBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 1rem 1.75rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--fg-inverse);
+  background-color: var(--color-charcoal);
+  border-radius: var(--radius-pill);
+  transition: background-color var(--dur-base) var(--ease-out),
+    opacity var(--dur-base) var(--ease-out);
+}
+
+.submitBtn:hover:not(:disabled) {
+  background-color: var(--accent);
+}
+
+.submitBtn:disabled {
+  opacity: 0.72;
+  cursor: not-allowed;
+}
+
+.spinner {
+  animation: spin 900ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation: none;
+  }
+}
+
+.disclaimer {
+  max-width: 44ch;
+  font-size: var(--fs-xs);
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-wide);
+  color: var(--fg-subtle);
+}
+
+/* ============================================================
+   SUCCESS PANEL
+   ============================================================ */
+
+.success {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: clamp(2.5rem, 5vw, 4rem);
+  border: var(--border-hairline);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-elevated);
+  max-width: 42rem;
+}
+
+.success:focus {
+  outline: none;
+}
+
+.successIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: var(--color-sage-deep);
+  border: 1px solid var(--color-sage-deep);
+  border-radius: 50%;
+}
+
+.successLabel {
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.successTitle {
+  color: var(--fg);
+}
+
+.successBody {
+  max-width: 46ch;
+  font-size: var(--fs-lead);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-body);
+  color: var(--fg-muted);
+  text-wrap: pretty;
+}
+
+.successActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.primaryBtn,
+.ghostBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.9rem 1.4rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  transition: background-color var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out);
+}
+
+.primaryBtn {
+  color: var(--fg-inverse);
+  background-color: var(--color-charcoal);
+}
+
+.primaryBtn:hover {
+  background-color: var(--accent);
+}
+
+.ghostBtn {
+  color: var(--fg);
+  border: 1px solid var(--border-color-strong);
+}
+
+.ghostBtn:hover {
+  background-color: var(--color-paper);
+  border-color: var(--fg);
+}
+
+/* ------------------------------------------------------------
+   PHASE 10 — Narrow-screen refinements.
+   Below 480px, reduce the form's internal padding and make the
+   submit button full-width so it's easy to reach with a thumb.
+   ------------------------------------------------------------ */
+
+@media (max-width: 480px) {
+  .form {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .actions {
+    align-items: stretch;
+  }
+
+  .submitBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .disclaimer {
+    text-align: left;
+  }
+
+  .success {
+    padding: 2rem 1.5rem;
+  }
+
+  .successActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primaryBtn,
+  .ghostBtn {
+    justify-content: center;
+  }
+}

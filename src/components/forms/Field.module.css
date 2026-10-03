@@ -1,0 +1,93 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.required {
+  color: var(--accent);
+}
+
+/* ---------- Control ---------- */
+
+.control {
+  width: 100%;
+  padding: 0.85rem 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--fg);
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border-color-strong);
+  border-radius: 0;
+  transition: border-color var(--dur-base) var(--ease-out);
+}
+
+.control:hover {
+  border-bottom-color: var(--fg);
+}
+
+.control:focus {
+  outline: none;
+  border-bottom-color: var(--accent);
+}
+
+.control::placeholder {
+  color: var(--fg-subtle);
+}
+
+.controlError {
+  border-bottom-color: var(--color-wine);
+}
+
+.controlError:focus {
+  border-bottom-color: var(--color-wine);
+}
+
+/* Textarea gets a proper box so it's easier to use */
+textarea.control {
+  padding: 0.85rem 0.9rem;
+  border: 1px solid var(--border-color-strong);
+  border-radius: var(--radius-sm);
+  min-height: 7rem;
+}
+
+textarea.control:focus {
+  border-color: var(--accent);
+}
+
+textarea.control.controlError {
+  border-color: var(--color-wine);
+}
+
+/* Date and time inputs — match the underline style */
+.control[type="date"],
+.control[type="time"],
+.control[type="number"] {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Message ---------- */
+
+.error {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-body);
+  color: var(--color-wine);
+}
+
+.hint {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-body);
+  color: var(--fg-subtle);
+}

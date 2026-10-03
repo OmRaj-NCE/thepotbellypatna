@@ -1,0 +1,13 @@
+/* ============================================================
+   THE POTBELLY — PATNA
+   Stylesheet entry point.
+   ------------------------------------------------------------
+   Order matters:
+     1. variables  → the tokens
+     2. typography → the type vocabulary
+     3. globals    → the reset & base styles that consume them
+   ============================================================ */
+
+@import "./styles/variables.css";
+@import "./styles/typography.css";
+@import "./styles/globals.css";

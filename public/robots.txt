@@ -1,0 +1,7 @@
+# The Potbelly — Patna
+# https://the-potbelly-patna.example.com
+
+User-agent: *
+Allow: /
+
+Sitemap: https://the-potbelly-patna.example.com/sitemap.xml

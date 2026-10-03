@@ -1,0 +1,36 @@
+.group {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-pill);
+  background-color: var(--bg-elevated);
+}
+
+.btn {
+  padding: 0.4rem 0.85rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  transition: color var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out);
+}
+
+.btn:hover {
+  color: var(--fg);
+}
+
+.active {
+  color: var(--fg-inverse);
+  background-color: var(--color-charcoal);
+}
+
+.active:hover {
+  color: var(--fg-inverse);
+}

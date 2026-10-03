@@ -1,0 +1,93 @@
+.section {
+  padding-block: clamp(3rem, 6vw, 5rem) clamp(5rem, 11vw, 10rem);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 1.15fr 1fr;
+    gap: clamp(3rem, 8vw, 6rem);
+  }
+}
+
+.copy {
+  max-width: 40rem;
+}
+
+.title {
+  margin-top: var(--space-5);
+  color: var(--fg);
+}
+
+.body {
+  max-width: 42ch;
+  margin-top: var(--space-5);
+  font-size: var(--fs-lead);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-loose);
+  color: var(--fg-muted);
+  text-wrap: pretty;
+}
+
+.phoneLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-7);
+  padding-bottom: 4px;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  line-height: 1;
+  letter-spacing: var(--ls-snug);
+  color: var(--fg);
+  border-bottom: 1px solid currentColor;
+  transition: color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out);
+}
+
+.phoneLink svg {
+  color: var(--accent);
+}
+
+.phoneLink:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ---------- Side notes ---------- */
+
+.notes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: var(--border-hairline-strong);
+}
+
+.noteBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.noteLabel {
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--fg-subtle);
+}
+
+.noteText {
+  max-width: 40ch;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-body);
+  color: var(--fg);
+}

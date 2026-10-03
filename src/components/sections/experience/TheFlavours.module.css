@@ -1,0 +1,77 @@
+.section {
+  background-color: var(--bg-sunken);
+  padding-block: clamp(5rem, 11vw, 11rem);
+}
+
+.head {
+  max-width: 52rem;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.title {
+  margin-top: var(--space-4);
+}
+
+.subtitle {
+  margin-top: var(--space-5);
+  max-width: 48ch;
+}
+
+/* ---------- Grid of four ---------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: var(--border-hairline-strong);
+  border-left: var(--border-hairline);
+}
+
+@media (min-width: 800px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: clamp(1.75rem, 3.5vw, 2.5rem);
+  border-right: var(--border-hairline);
+  border-bottom: var(--border-hairline);
+  background-color: var(--bg-elevated);
+  min-height: 22rem;
+}
+
+.cardHead {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.cardTitle {
+  color: var(--fg);
+}
+
+.gloss {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.body {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-loose);
+  color: var(--fg-muted);
+  text-wrap: pretty;
+}

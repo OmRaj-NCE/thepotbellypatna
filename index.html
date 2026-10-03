@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Fonts: Instrument Serif (display) + Work Sans (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:ital,wght@0,300..700;1,300..700&display=swap"
+    />
+
+    <meta name="theme-color" content="#f6f1e7" />
+
+    <!-- Default title and description.
+         These are overridden per-page by react-helmet-async.
+         They act as a fallback for the very first paint. -->
+    <title>The Potbelly — Patna</title>
+    <meta
+      name="description"
+      content="A taste of Bihar, reimagined. The Potbelly is a contemporary Bihari dining room inside the Bihar Museum, Patna."
+    />
+
+    <!-- ------------------------------------------------------------
+         Structured data — schema.org Restaurant
+         Only verified values. No opening hours, awards, price range
+         or rating are included because they are not confirmed.
+         ------------------------------------------------------------ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "The Potbelly",
+        "alternateName": "थे पोटबेली",
+        "description": "A contemporary Bihari dining room inside the Bihar Museum, Patna. Starters, small plates, platters, biryanis and desi coolers, cooked in the Bihari tradition and plated for today.",
+        "url": "https://the-potbelly-patna.example.com",
+        "image": "https://the-potbelly-patna.example.com/images/placeholder.svg",
+        "telephone": "+91 70919 10283",
+        "servesCuisine": ["North Indian", "Bihari"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "3, Bailey Rd, inside Bihar Museum, Officers Flat, Market",
+          "addressLocality": "Patna",
+          "addressRegion": "Bihar",
+          "postalCode": "800001",
+          "addressCountry": "IN"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

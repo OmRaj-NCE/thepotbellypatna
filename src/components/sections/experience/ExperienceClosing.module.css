@@ -1,0 +1,121 @@
+.section {
+  background-color: var(--color-terracotta);
+  color: var(--fg-inverse);
+  padding-block: clamp(5rem, 12vw, 12rem);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: end;
+}
+
+@media (min-width: 900px) {
+  .inner {
+    grid-template-columns: 1.3fr 1fr;
+  }
+}
+
+.copy {
+  max-width: 42rem;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: rgba(246, 241, 231, 0.8);
+  margin-bottom: var(--space-5);
+}
+
+.title {
+  color: var(--fg-inverse);
+}
+
+.body {
+  max-width: 42ch;
+  margin-top: var(--space-6);
+  font-size: var(--fs-lead);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-body);
+  color: rgba(246, 241, 231, 0.92);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-7);
+}
+
+.btnPrimary,
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.95rem 1.5rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  transition: background-color var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out);
+}
+
+.btnPrimary {
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+}
+
+.btnPrimary:hover {
+  background-color: var(--color-charcoal);
+  color: var(--fg-inverse);
+}
+
+.btnGhost {
+  color: var(--fg-inverse);
+  border: 1px solid rgba(246, 241, 231, 0.55);
+}
+
+.btnGhost:hover {
+  background-color: rgba(246, 241, 231, 0.1);
+  border-color: rgba(246, 241, 231, 0.9);
+}
+
+/* ---------- Side ---------- */
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(246, 241, 231, 0.3);
+}
+
+.sideBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.sideLabel {
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: rgba(246, 241, 231, 0.7);
+}
+
+.sideText {
+  max-width: 34ch;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-body);
+  color: var(--fg-inverse);
+}

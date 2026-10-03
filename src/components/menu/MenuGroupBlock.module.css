@@ -1,0 +1,30 @@
+.group + .group {
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: var(--border-hairline);
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list > *:last-child {
+  border-bottom: none;
+}

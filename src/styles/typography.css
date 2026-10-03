@@ -1,0 +1,141 @@
+/* ============================================================
+   THE POTBELLY — PATNA
+   Typography Utilities
+   ------------------------------------------------------------
+   Global, reusable type classes. Apply them directly in JSX:
+     <h1 className="display-1">The Potbelly</h1>
+   They live outside CSS Modules on purpose, so they can be
+   shared across every component without repetition.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   DISPLAY — Instrument Serif
+   Used for headlines, dish names, and prices.
+   ------------------------------------------------------------ */
+
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-regular);
+  font-style: normal;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  text-wrap: balance;
+}
+
+.display-1 { font-size: var(--fs-display-1); }
+.display-2 { font-size: var(--fs-display-2); }
+.display-3 { font-size: var(--fs-display-3); }
+.display-4 { font-size: var(--fs-display-4); line-height: var(--lh-snug); }
+
+/* Italic serif — for pull quotes and editorial emphasis */
+.display-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--ls-snug);
+}
+
+/* ------------------------------------------------------------
+   HEADINGS — Work Sans
+   Used for section headers inside dense layouts where the
+   serif would be too decorative.
+   ------------------------------------------------------------ */
+
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4 {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-snug);
+  text-wrap: balance;
+}
+
+.heading-1 { font-size: var(--fs-h1); }
+.heading-2 { font-size: var(--fs-h2); }
+.heading-3 { font-size: var(--fs-h3); }
+.heading-4 { font-size: var(--fs-h4); }
+
+/* ------------------------------------------------------------
+   EYEBROW — small uppercase label
+   The workhorse of editorial layout: sits above headlines,
+   labels sections, and tags metadata.
+   ------------------------------------------------------------ */
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.eyebrow--accent { color: var(--accent); }
+.eyebrow--inverse { color: var(--fg-inverse-muted); }
+
+/* ------------------------------------------------------------
+   BODY COPY
+   ------------------------------------------------------------ */
+
+.lead {
+  font-family: var(--font-body);
+  font-size: var(--fs-lead);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-normal);
+  color: var(--fg-muted);
+  text-wrap: pretty;
+}
+
+.body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  color: var(--fg);
+  text-wrap: pretty;
+}
+
+.body--muted { color: var(--fg-muted); }
+
+.caption {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-wide);
+  color: var(--fg-subtle);
+}
+
+/* ------------------------------------------------------------
+   PRICE — used throughout the menu
+   Serif numerals with tabular alignment so prices form a
+   clean vertical column in a list.
+   ------------------------------------------------------------ */
+
+.price {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: var(--fw-regular);
+  line-height: 1;
+  letter-spacing: var(--ls-snug);
+  font-variant-numeric: tabular-nums;
+  color: var(--fg);
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------------
+   SMALL UTILITIES
+   ------------------------------------------------------------ */
+
+.text-inverse   { color: var(--fg-inverse); }
+.text-accent    { color: var(--accent); }
+.text-balance   { text-wrap: balance; }
+.text-pretty    { text-wrap: pretty; }
+.text-uppercase { text-transform: uppercase; letter-spacing: var(--ls-wider); }

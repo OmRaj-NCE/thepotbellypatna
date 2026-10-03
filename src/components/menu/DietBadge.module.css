@@ -1,0 +1,36 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 13px;
+  height: 13px;
+  border: 1.5px solid currentColor;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.md {
+  width: 15px;
+  height: 15px;
+}
+
+.veg {
+  color: var(--color-sage-deep);
+}
+
+.nonVeg {
+  color: var(--color-wine);
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  background-color: currentColor;
+  border-radius: 50%;
+}
+
+.md .dot {
+  width: 7px;
+  height: 7px;
+}
